@@ -41,10 +41,6 @@ function App() {
       currentErrors.nome = "Name with less than 3 caracters";
     }
 
-    if (name.length < 3) {
-      currentErrors.nome = "Name with less than 3 caracters";
-    }
-
     if (Object.keys(currentErrors).length > 0) {
       setErrors(currentErrors);
     } else {
