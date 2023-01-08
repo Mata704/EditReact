@@ -1,0 +1,13 @@
+#sortbar {
+    box-shadow: 0 0 10px #747474;
+    line-height: 60px;
+    margin-bottom: 30px !important;
+  }
+
+#sortbar select {
+    border: 1px solid #e6e6e6;
+    height: 36px;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
+  

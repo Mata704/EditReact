@@ -1,0 +1,27 @@
+.central-link-light {
+    width: 100%;
+    margin-top: 15px !important;
+  }
+  
+.central-link-light a {
+    display: inline-block;
+    padding: 10px 15px;
+  }
+  
+.central-link-light a:hover {
+    color: #747474;
+  }
+
+.central-link-light a{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
+.central-link-light{
+    text-align: center;
+}
+
+

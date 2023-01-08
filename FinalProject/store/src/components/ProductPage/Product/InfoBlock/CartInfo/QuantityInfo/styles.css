@@ -1,0 +1,28 @@
+#product #product-description .product-description-line .qty button, #product #product-description .product-description-line .qty input {
+    width: 33.3333%;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgb(179, 179, 179);
+    padding: 0px;
+}
+
+#product #product-description .product-description-line .qty button {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+}
+
+#product #product-description .product-description-line .qty button.btnleft, #product #product-description .product-description-line .qty input.btnleft {
+    border-left-width: 1px;
+}
+
+#product #product-description .product-description-line .qty {
+    display: flex;
+}

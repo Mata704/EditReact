@@ -1,0 +1,75 @@
+#journal .journal-card-image img{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  #journal .journal-card {
+    box-sizing: border-box;
+    height: 100%;
+    border-top: 2px solid #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  #journal .journal-card h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 15px 0;
+  }
+  
+  #journal .journal-card-image {
+    margin-top: auto;
+    background-color: #747474;
+  }
+  
+  #journal .journal-card-image img {
+    opacity: 0.6;
+  }
+  
+  #journal .journal-card-small {
+    height: 300px;
+  }
+  
+  #journal .journal-card-small .fancytext{
+    margin: 0;
+  }
+  
+  
+  
+  #journal .journal-card-small h3 {
+    font-size: 1.3rem;
+    margin: 15px 0;
+  }
+  
+  @media (min-width: 750px) {
+    #journal .journal-card-small {
+      height: 330px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    #journal .journal-card-small {
+      height: 270px;
+    }
+  }
+  
+  #journal .journal-card-small .journal-card-image {
+    margin-top: unset;
+  }
+  
+  @media (min-width: 1200px) {
+    #journal .journal-card-small .journal-card-image {
+      margin-top: auto;
+    }
+  }
+  
+  #journal .journal-card:hover .journal-card-image img {
+    opacity: 1;
+  }

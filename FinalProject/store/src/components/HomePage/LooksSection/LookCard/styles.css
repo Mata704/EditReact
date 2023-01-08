@@ -1,0 +1,41 @@
+#looks .look-card-image img, #looks .look-card .fancytext{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+  
+#looks .look-card .fancytext{
+    margin: 0 !important;
+  }
+
+#looks .look-card {
+    display: block;
+    position: relative;
+  }
+  
+#looks .look-card-image {
+    background-color: #747474;
+  }
+  
+#looks .look-card-image img {
+    opacity: 0.6;
+  }
+  
+#looks .look-card .fancytext{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+  }
+  
+#looks .look-card:hover .fancytext{
+    background-color: #FFF;
+  }
+  
+#looks .look-card:hover .look-card-image img {
+    opacity: 1;
+  }

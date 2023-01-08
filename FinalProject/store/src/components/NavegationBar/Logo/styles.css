@@ -1,0 +1,15 @@
+body header nav #logo {
+  height: 45px;
+}
+
+body header nav #logo a {
+  display: inline-block;
+  width: 125px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+body header nav #logo a{
+  background-color: #000;
+}

@@ -1,0 +1,36 @@
+#product #product-description .product-care ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #product #product-description .product-care ul > li > a {
+    display: block;
+    position: relative;
+    line-height: 30px;
+  }
+  
+  #product #product-description .product-care ul > li > a .plus, #product #product-description .product-care ul > li > a .minus {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  #product #product-description .product-care ul > li > a .minus {
+    display: none;
+  }
+  
+  #product #product-description .product-care ul > li > div {
+    display: none;
+  }
+  
+  #product #product-description .product-care ul > li.open > a .minus {
+    display: block;
+  }
+  
+  #product #product-description .product-care ul > li.open > a .plus {
+    display: none;
+  }
+  
+  #product #product-description .product-care ul > li.open > div {
+    display: block;
+  }

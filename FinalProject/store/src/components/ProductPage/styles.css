@@ -1,0 +1,22 @@
+.separador {
+    height: 40vh;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url(./../../assets/slider/slider01-small.jpg);
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+  }
+  
+@media (min-width: 750px) {
+    .separador {
+      background-image: url(./../../assets/slider/slider01-medium.jpg);
+    }
+  }
+  
+@media (min-width: 1200px) {
+    .separador {
+      background-image: url(./../../assets/slider/slider01.jpg);
+    }
+  }
+  

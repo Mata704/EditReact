@@ -1,0 +1,19 @@
+#product #bigimg .share {
+    color: #747474;
+  }
+
+#product #bigimg .share a {
+    color: #747474;
+    font-size: 1.3rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+  
+#product #bigimg .share a:hover {
+    color: #000;
+  }
+
+#product #bigimg .share{
+    font-size: 0.8rem;
+  }

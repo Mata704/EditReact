@@ -1,0 +1,39 @@
+#press .press-card-image img, #press .press-card p{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  
+
+#press .press-card p {
+    margin: 0 !important;
+  }
+
+#looks .look-card, #press .press-card{
+    margin-bottom: 30px !important;
+  }
+
+#press .press-card {
+    display: block;
+  }
+  
+#press .press-card-image {
+    background-color: #747474;
+  }
+  
+#press .press-card-image img {
+    opacity: 0.6;
+  }
+  
+#press .press-card p {
+    background-color: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
+  
+#press .press-card:hover .press-card-image img {
+    opacity: 1;
+  }

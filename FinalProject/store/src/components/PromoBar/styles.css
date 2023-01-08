@@ -1,0 +1,16 @@
+body #promobar {
+  font-size: 0.7rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1200px) {
+  body #promobar {
+    letter-spacing: 1px;
+  }
+}
+
+
+
+
+

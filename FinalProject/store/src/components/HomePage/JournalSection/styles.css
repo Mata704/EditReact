@@ -1,0 +1,24 @@
+.central-link{
+    text-align: center;
+    width: 100%;
+  }
+
+.central-link a{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+  
+.central-link a:hover {
+    background-color: #000;
+  }
+
+.central-link a{
+    color: #FFF;
+    background-color: #333;
+  }
