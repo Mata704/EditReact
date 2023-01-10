@@ -1,0 +1,59 @@
+#filters .sizes {
+    display: none;
+  }
+  
+  #filters .sizes.open {
+    display: block;
+  }
+  
+  @media (min-width: 750px) {
+    #filters .sizes {
+      display: block;
+    }
+  }
+  
+  #filters .sizes .sizebtns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #filters .sizes .sizebtns button {
+    cursor: pointer;
+    width: 36px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #e6e6e6;
+    background-color: #FFF;
+  }
+  
+  #filters .sizes .sizebtns button:hover {
+    background-color: #e6e6e6;
+    border-color: #b3b3b3;
+  }
+
+ #looks .look-card #filters .sizes .sizebtns button, #filters .sizes .sizebtns #looks .look-card button{
+    margin: 0 !important;
+  }
+
+ #filters .sizes .sizebtns button{
+    font-size: 0.8rem;
+  }
+  
+ #filters .sizes .sizebtns button{
+    text-transform: uppercase;
+  }
+  
+ #filters .sizes .sizebtns button{
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
+#filters .sizes .sizebtns button{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+

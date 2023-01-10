@@ -7,25 +7,25 @@ const CartInfo = (props) =>
   {
     const [quantity, setQuantity] = useState(1);
     const [size, setSize] = useState();
+    const [cartInfo, setCartInfo] = useState([]);
 
-    const addToCart=(ci,setCI,qnt,sz,id) => 
+    const addToCart=() => 
     {
-        if(sz!=undefined)
+        if(size!=undefined)
         {
-            const addInfo= {id:id, quantity:qnt, size:sz}
-            const aux =[...ci]
+            const addInfo= {id:props.id, quantity:quantity, size:size}
+            const aux =[...cartInfo]
             aux.push(addInfo) 
-            setCI(aux)    
+            setCartInfo(aux)    
         }     
     }
-
 
     return (
         <div className="product-description-line gridrowfull">
             <SizeInfo sizes={props.sizes} setSize={setSize}/>
             <QuantityInfo quantity={quantity} setQuantity={setQuantity}/>
             <div className="col-6 col-d cart">
-                <button type="button" onClick={()=>addToCart(props.cartInfo, props.setCartInfo,quantity,size,props.id)}>Add to cart</button>
+                <button type="button" onClick={addToCart}>Add to cart</button>
             </div>
             <div className="col-12 col-d textright wishlist marginbottomtwothirds">
                 <a href="#" title="Add top wishlist" className="fancytext"><i className="icn-heart"></i> Add to wishlist</a>

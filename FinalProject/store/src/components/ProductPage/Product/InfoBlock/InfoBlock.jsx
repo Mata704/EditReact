@@ -33,7 +33,7 @@ const InfoBlock = (props) =>
         <ProductPartner name="Artisan Employment" value="54 jobs"/>
         <ProductPartner name="Partnership" value={props.info.partnership}/>
         <ProductPartner name="In Collab" value={props.info.partnership}/>
-        <CartInfo id={props.info.id} sizes={props.info.sizes}  cartInfo={props.cartInfo} setCartInfo={props.setCartInfo}/>
+        <CartInfo id={props.info.id} sizes={props.info.sizes}/>
         <ProductInfo features={props.info.description} fabric={props.info.description}/>
     </div> 
     )

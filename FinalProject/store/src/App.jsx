@@ -1,5 +1,13 @@
 import { Routes, Route} from 'react-router-dom';
 import './App.css'
+import './css/colors.css'
+import './css/elements.css'
+import './css/images.css'
+import './css/text.css'
+import './css/marginsAndPaddings.css'
+import './css/grid.css'
+import './css/icn.css'
+
 import PromoBar from './components/PromoBar/PromoBar'
 import NavegationBar from './components/NavegationBar/NavegationBar'
 import FooterBar from './components/FooterBar/FooterBar'

@@ -3,15 +3,15 @@ import './styles.css'
 const FilterType = (props) =>
   {
  
-    function changeFilter(value,filter,setFilter)
+    function changeFilter(value)
     {
-        if(filter=='' || filter!=value)
+        if(props.filter=='' || props.filter!=value)
         {
-            setFilter(value)
+            props.setFilter(value)
             
-        } else if(filter==value)
+        } else if(props.filter==value)
         {
-            setFilter('')  
+            props.setFilter('')  
         }
         
     }
@@ -28,7 +28,7 @@ const FilterType = (props) =>
 
     const allCategories = props.allCategories.filter(category => category.type==props.type).map((category) => {
         
-        return (<li key={category.subType} ><a title={category.subType} onClick={() => changeFilter(category.id,props.filter,props.setFilter)}><i className="icn-chevron-right"></i> {category.subType}</a></li>)
+        return (<li key={category.subType} ><a title={category.subType} value={category.id} onClick={() => changeFilter(category.id)}><i className="icn-chevron-right"></i> {category.subType}</a></li>)
     })
 
 

@@ -6,6 +6,9 @@ import MultiTextBlock from './MultiTextBlock/MultiTextBlock'
 import PressBlocks from './PressBlocks/PressBlocks'
 import Product from './Product/Product'
 import LooksBlock from './LooksBlock/LooksBlock'
+import ReviewBlock from './ReviewBlock/ReviewBlock'
+import RelatedProducts from './RelatedProducts/RelatedProducts'
+
 
 
 
@@ -14,7 +17,6 @@ const ProductPage = (props) =>
     const params =useParams()
     const [productData, setProductData] = useState({});
     const [loading, setLoading] = useState(true);
-    const [cartInfo, setCartInfo] = useState([]);
 
 
     const doubleText= [{id:1, extraClass:'graymedium marginbottomfull', text:'Nunc a augue velit. Nullam eget velit sit amet orci dignissim iaculis. Quisque dignissim neque in odio laoreet sodales. Phasellus gravida facilisis est. Ut nec metus lobortis, euismod felis eget, ornare erat. Donec gravida diam sed facilisis consequat.'},
@@ -22,10 +24,6 @@ const ProductPage = (props) =>
                       ]
     const singleText= [{id:1, extraClass:'', text:'Nunc a augue velit. Nullam eget velit sit amet orci dignissim iaculis. Quisque dignissim neque in odio laoreet sodales. Phasellus gravida facilisis est. Ut nec metus lobortis, euismod felis eget, ornare erat. Donec gravida diam sed facilisis consequat.'},
                       ]
-
-
-    
-
 
     useEffect(() => {
 
@@ -50,14 +48,16 @@ const ProductPage = (props) =>
         {(!loading) && 
         <>
             <LocationBar name={productData.name} category={productData.category}/>
-            <Product productData={productData} cartInfo={cartInfo} setCartInfo={setCartInfo} />
+            <Product productData={productData}/>
             <div className="separador"></div>
             <MultiTextBlock info={doubleText}/>
             <PressBlocks/>
             <div className="bg-graylight paddingverticaldouble marginbottomfull">
               <MultiTextBlock info={singleText}/>
             </div>
-            <LooksBlock/>   
+            <LooksBlock/> 
+            <ReviewBlock score={productData.score}/>
+            <RelatedProducts categories={productData.category} id={productData.id}/>  
         </>
         } 
       </>

@@ -2,15 +2,20 @@ import './styles.css'
 
 const Categories = (props) =>
   {
+    const options = ["About Us","Testimonials","Contact","Journal","Privacy Policy"]
+    
+    const optionsList = options.map((option) => {
+      return (
+        <li key={option}><a href="#" title={option}>{option}</a></li>
+      )
+  })  
+
+
     return (
         <div className="col-4 col-d-2">
             <p className="margintopnone">Categories</p>
             <ul>
-                <li><a href="#" title="About Us">About Us</a></li>
-                <li><a href="#" title="Testimonials">Testimonials</a></li>
-                <li><a href="#" title="Contact">Contact</a></li>
-                <li><a href="#" title="Journal">Journal</a></li>
-                <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+              {optionsList}
             </ul>
         </div>
     )

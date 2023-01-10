@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom';
 
 const MainMenu = (props) =>
   {
+    const options = [{name:"Shop", link:"/ProductList/"},{name:"Fabric",link:"#"},{name:"Journal",link:"#"},{name:"About",link:"#"}]
+
+    const optionsList = options.map((option) => {
+      return (
+        <li key={option.name}><Link to={option.link} title={option.name}>{option.name}<i className="icn-chevron-down"></i></Link></li>  
+      )
+    })  
+
     return (
         <ul id="mainmenu" className="col-12 col-t-6 col-d-7">
-            <li><Link to="/ProductList/" title="Shop">Shop <i className="icn-chevron-down"></i></Link></li>
-            <li><a href="#" title="Fabric">Fabric<i className="icn-chevron-down"></i></a></li>
-            <li><a href="#" title="Journal">Journal<i className="icn-chevron-down"></i></a></li>
-            <li><a href="#" title="About">About<i className="icn-chevron-down"></i></a></li>
+            {optionsList}
         </ul>
     )
   }

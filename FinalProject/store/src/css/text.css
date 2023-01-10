@@ -1,0 +1,25 @@
+/* ============================== */
+/* ======= TEXT ALIGNMENT ======= */
+/* ============================== */
+.textleft {
+	text-align: left;
+  }
+  
+.textcenter{
+	text-align: center;
+  }
+  
+.textright {
+	text-align: right;
+  }
+
+.fancytext{
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
+.uppercase, .fancytext{
+  text-transform: uppercase;
+  }

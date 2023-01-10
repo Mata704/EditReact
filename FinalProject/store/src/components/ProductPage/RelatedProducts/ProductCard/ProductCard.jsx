@@ -1,29 +1,31 @@
 import './styles.css'
 import { Link } from 'react-router-dom';
 
+
+
 const ProductCard = (props) =>
   {
+   
 
-  function getTypesString(entryArray)
+    function getTypesString(entryArray)
     {
-      const type ={
-        1 : 'snickers',
-        2 : 'coats',
-        3 : 'pants',
-        4 : 'jackets'
-      }
+        const type ={
+          1 : 'snickers',
+          2 : 'coats',
+          3 : 'pants',
+          4 : 'jackets'
+        }
 
-      let auxArray=[]
-      for(let i=0;i<entryArray.length;i++)
-      {
-          auxArray.push(type[entryArray[i]])
-      }
-
-      return(auxArray.join(' '))
+        let auxArray=[]
+        for(let i=0;i<entryArray.length;i++)
+        {
+            auxArray.push(type[entryArray[i]])
+        }
+        return(auxArray.join(' '))
     }
 
-    return ( 
-    <Link className={`product-card col-${props.position<2 ? 12 : 6} col-t-6 col-d-3`} to={`/Product/${props.info.id}`} title="View Product">
+    return (
+    <Link reloadDocument className="product-card col-6 col-t-3" to={`/Product/${props.info.id}`} title="View Product">
         <div className="product-card-image">
             {props.info.new ? <span className="product-card-image-badge">New!</span> : <></>}
             <img className="imgfit"  src={props.info.image} />
@@ -34,5 +36,5 @@ const ProductCard = (props) =>
     </Link>
     )
   }
-
+  
   export default ProductCard;

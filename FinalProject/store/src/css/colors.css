@@ -1,0 +1,62 @@
+/* ==================================== */
+/* ======= COLORS / BACKGROUNDS ======= */
+/* ==================================== */
+.primary {
+	color: #f5d71f;
+  }
+  
+.secondary{
+	color: #ff7425;
+  }
+  
+.graydark {
+	color: #333;
+  }
+  
+.gray {
+	color: #747474;
+  }
+  
+.graylight {
+	color: #F3F3F3;
+  }
+  
+.graymedium{
+	color: gray;
+  }
+  
+.white{
+	color: #FFF;
+  }
+  
+.black {
+	color: #000;
+  }
+  
+.bg-primary{
+	background-color: #f5d71f;
+  }
+  
+.bg-secondary {
+	background-color: #ff7425;
+  }
+  
+.bg-gray {
+	background-color: #747474;
+  }
+  
+.bg-graydark{
+	background-color: #333;
+  }
+  
+.bg-graylight {
+	background-color: #F3F3F3;
+  }
+  
+.bg-white {
+	background-color: #FFF;
+  }
+  
+.bg-black{
+	background-color: #000;
+  }

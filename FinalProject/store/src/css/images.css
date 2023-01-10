@@ -1,0 +1,14 @@
+/* ====================== */
+/* ======= IMAGES ======= */
+/* ====================== */
+.imgfit {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+  
+  .imgfit img, .imgfit source {
+	display: block;
+	width: 100%;
+	height: auto;
+}

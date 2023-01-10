@@ -4,21 +4,30 @@ import './styles.css'
 const ProductList = (props) =>
   {
     const {sortValue, setSortValue} = props;
+    const sortOptions = ["Price","Popularity","Name","Season"]
+
+    
+    const handleMaxPriceChange = (event) => {
+        setSortValue(event.target.value);
+    };
+    
+    const optionsList = sortOptions.map((option) => {
+        return (
+            <option key={option} value={option}>{option}</option>
+        )
+    })  
+
     return (
     <div id="sortbar">
         <div className="gridrow">
             <div className="col-4">Tops</div>
             <div className="col-8 textright">Sort by
-                <select value={sortValue} onChange={(e) => setSortValue(e.target.value)}>
-                    <option value="Price">Price</option>
-                    <option value="Popularity">Popularity</option>
-                    <option value="Name">Name</option>
-                    <option value="Season">Season</option>
+                <select value={sortValue} onChange={handleMaxPriceChange}>
+                    {optionsList}
                 </select>
             </div>
         </div>
-    </div>
-      
+    </div>  
     )
   }
 

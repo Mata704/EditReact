@@ -85,7 +85,6 @@ const GridList = (props) =>
       return AuxNameCategorys    
     }
 
-
     const fiterType =(types,actualtype) =>
     {
       //filters logic

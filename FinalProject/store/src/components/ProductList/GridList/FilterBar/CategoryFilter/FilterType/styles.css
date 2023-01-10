@@ -1,0 +1,89 @@
+#filters .categories li ul#filters li{
+    line-height: 45px;
+    border-bottom: 1px solid #e6e6e6;
+    cursor: pointer;
+  }
+  
+#filters .categories {
+    border-bottom: 1px solid #e6e6e6;
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #filters .categories.open {
+    display: block;
+  }
+  
+  @media (min-width: 750px) {
+    #filters .categories {
+      display: block;
+    }
+  }
+  
+  #filters .categories li {
+    font-size: 1.2rem;
+  }
+  
+  #filters .categories li a {
+    display: block;
+    position: relative;
+  }
+  
+  #filters .categories li a .icn-chevron-up, #filters .categories li a .icn-chevron-down {
+    line-height: 1.6968rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  #filters .categories li a .icn-chevron-up {
+    display: none;
+  }
+  
+  #filters .categories li ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #filters .categories li.open a .icn-chevron-up {
+    display: block;
+  }
+  
+  #filters .categories li.open a .icn-chevron-down {
+    display: none;
+  }
+  
+  #filters .categories li.open ul {
+    display: block;
+  }
+
+
+  #filters .categories > li{
+    margin-bottom: 15px !important;
+  }
+
+  #filters .categories > li > ul > li {
+    margin-top: 7.5px !important;
+  }
+  
+  #filters .categories > li > ul > li {
+    padding-left: 7.5px !important;
+  }
+
+  #filters .categories > li > ul > li{
+    font-size: 0.8rem;
+  }
+  
+ #filters .categories > li > ul > li{
+    text-transform: uppercase;
+  }
+  
+#filters .categories > li > ul > li{
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
