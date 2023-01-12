@@ -3,7 +3,7 @@ import './styles.css'
 
 const ProductList = (props) =>
   {
-    const {sortValue, setSortValue} = props;
+    const {sortValue, setSortValue, type, subtype} = props;
     const sortOptions = ["Price","Popularity","Name","Season"]
 
     
@@ -20,7 +20,7 @@ const ProductList = (props) =>
     return (
     <div id="sortbar">
         <div className="gridrow">
-            <div className="col-4">Tops</div>
+            <div className="col-4">{type}{subtype?` > ${subtype}`:''}</div>
             <div className="col-8 textright">Sort by
                 <select value={sortValue} onChange={handleMaxPriceChange}>
                     {optionsList}

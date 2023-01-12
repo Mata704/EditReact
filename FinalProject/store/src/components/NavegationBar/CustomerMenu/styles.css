@@ -27,3 +27,24 @@ body header nav ul#customermenu i {
 .icn-shopping-cart:before {
       content: "";
     }
+
+.cart-info-counter {
+  position: absolute;
+  bottom:-0.5rem;
+  right:-0.5rem;
+  background-color: #f5d71f;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0;
+  margin:0;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.icon-link {
+  position:relative
+}

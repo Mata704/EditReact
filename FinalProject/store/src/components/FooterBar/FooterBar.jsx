@@ -1,4 +1,3 @@
-import './styles.css'
 import Categories from './Categories/Categories'
 import Partners from './Partners/Partners'
 import Contacts from './Contacts/Contacts'

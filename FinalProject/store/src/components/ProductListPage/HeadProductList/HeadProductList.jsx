@@ -4,11 +4,13 @@ import './styles.css'
 
 const HeadProductList = (props) =>
   {
+    const {type} =props
+   
   
     return (
     <div id="headerproductlist">
         <div className="textoverlay">
-            <h1>Tops</h1>
+            <h1>{type}</h1>
             <p>These awesome products</p>
         </div>
     </div>

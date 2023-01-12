@@ -1,4 +1,3 @@
-import './styles.css'
 import Slider from './Slider/Slider'
 import AboutSection from './AboutSection/AboutSection'
 import JournalSection from './JournalSection/JournalSection'

@@ -1,4 +1,3 @@
-import './styles.css'
 import FilterType from './FilterType/FilterType'
 
 const CategoryFilter = (props) =>

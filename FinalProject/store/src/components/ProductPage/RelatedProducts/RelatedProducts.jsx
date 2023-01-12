@@ -10,7 +10,7 @@ const RelatedProducts = (props) =>
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://foxcoding.net/api/getProductsList")
+        fetch("https://foxcoding.net/api/getProductsList?nProducts=100")
         .then(response => response.json())
         .then(result => {
         setData(result.data.products)
@@ -19,7 +19,6 @@ const RelatedProducts = (props) =>
       }, [])
 
       let aux=data.filter((val) => val.category.find((category) => props.categories.find((cat) => cat==category))).filter((val) => val.id!=props.id).slice(0,4)
-
       const productList = aux.map((product) => {
         return <ProductCard info={product} key={product.id}/>
         })

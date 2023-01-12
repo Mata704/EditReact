@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './styles.css'
 import ProductCard from './ProductCard/ProductCard'
 
 const TopProducts = (props) =>
@@ -8,7 +7,7 @@ const TopProducts = (props) =>
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://foxcoding.net/api/getProductsList")
+        fetch("https://foxcoding.net/api/getProductsList?nProducts=100")
         .then(response => response.json())
         .then(result => {
         const arrayAux=[...result.data.products].sort((a, b) => b.score - a.score);
@@ -16,6 +15,7 @@ const TopProducts = (props) =>
         setLoading(false)
         })
       }, [])
+
 
     const productList = data.slice(0, 8).map((product,i) => {
         return <ProductCard info={product} position={i} key={product.id}/>

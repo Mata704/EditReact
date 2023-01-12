@@ -1,13 +1,17 @@
 import './styles.css'
+import { useContext } from "react";
 import SizeInfo  from './SizeInfo/SizeInfo'
 import QuantityInfo  from './QuantityInfo/QuantityInfo'
 import { useState } from 'react'
+import { CartInfoContext } from '../../../../../contexts/CartInfoContext'
 
 const CartInfo = (props) =>
   {
     const [quantity, setQuantity] = useState(1);
     const [size, setSize] = useState();
     const [cartInfo, setCartInfo] = useState([]);
+
+    const { updateCart } = useContext(CartInfoContext);
 
     const addToCart=() => 
     {
@@ -16,10 +20,13 @@ const CartInfo = (props) =>
             const addInfo= {id:props.id, quantity:quantity, size:size}
             const aux =[...cartInfo]
             aux.push(addInfo) 
-            setCartInfo(aux)    
+            setCartInfo(aux)
+            updateCart(aux);    
         }     
     }
+   
 
+    
     return (
         <div className="product-description-line gridrowfull">
             <SizeInfo sizes={props.sizes} setSize={setSize}/>

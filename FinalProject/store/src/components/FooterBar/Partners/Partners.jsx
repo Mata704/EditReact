@@ -1,5 +1,3 @@
-import './styles.css'
-
 const Partners = (props) =>
   {
     const options = ["Support","Shipping & Returns","Size Guide","Product Care"]

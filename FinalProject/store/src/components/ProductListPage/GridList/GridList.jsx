@@ -6,39 +6,10 @@ import { useState, useEffect } from 'react'
 
 const GridList = (props) =>
   {
- 
-   const {sortValue} = props;
-   const [arrayData, setarrayData] = useState([]);
-   const [loading, setLoading] = useState(true);
-   const [filter, setFilter] = useState('');
-   const [sizeFilter, setSizeFilter] = useState('');
-   const [numberProducts, setNumberProducts] = useState(6);
+    const {sortValue,arrayData,filter,setFilter,type,subtype} = props;
+    const [sizeFilter, setSizeFilter] = useState('');
+    const [numberProducts, setNumberProducts] = useState(6);
 
-    //Fetch api data
-    useEffect(() => {
-        fetch("https://foxcoding.net/api/getProductsList")
-        .then(response => response.json())
-        .then(result => {
-        setarrayData(result.data.products)
-        setLoading(false)
-        })
-      }, [])
-
-    //dict for filters
-    const subtype ={
-        1 : 'snickers',
-        2 : 'coats',
-        3 : 'pants',
-        4 : 'jackets'
-    }
-    
-    const type={
-        1 : 'Shoes',
-        2 : 'Tops',
-        3 : 'Bottoms',
-        4 : 'Tops'
-      }
- 
     function sortType(val,type)
     {
       //sort data by type
@@ -112,8 +83,6 @@ const GridList = (props) =>
 
     return (
     <div className="gridrow">
-      {(!loading) && 
-      <>
         <FilterBar filter={filter} setFilter={setFilter} allCategories={allCategories} sizeFilter={sizeFilter} setSizeFilter={setSizeFilter} setNumberProducts={setNumberProducts}/>
         <div id="mainproductlist" className="product-list col-12 col-t-8 col-d-9 gridrowfull">
           {productList}
@@ -123,8 +92,6 @@ const GridList = (props) =>
           </div>
           }
         </div>
-      </>
-      }
     </div>
       
     )
