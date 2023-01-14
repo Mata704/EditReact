@@ -1,11 +1,11 @@
 import FilterType from './FilterType/FilterType'
 
-const CategoryFilter = (props) =>
+const CategoryFilter = ({filter,setFilter,allCategories}) =>
   {
-    const filterCategories =['Tops','Bottoms','Bags','Shoes']
+    const filterCategories =[{id:1, name:'Tops'},{id:2, name:'Bottoms'},{id:3, name:'Bags'},{id:4, name:'Shoes'}]
       
-    const allFilterCategories = filterCategories.map((categorie,i) => {
-        return <FilterType key={i} filter={props.filter} setFilter={props.setFilter} allCategories={props.allCategories} type={categorie}/>
+    const allFilterCategories = filterCategories.map((categorie) => {
+        return <FilterType key={categorie.id} filter={filter} setFilter={setFilter} allCategories={allCategories} type={categorie.name}/>
     })
     
     return(

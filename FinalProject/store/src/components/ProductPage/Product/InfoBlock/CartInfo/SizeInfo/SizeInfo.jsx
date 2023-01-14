@@ -1,10 +1,10 @@
 import './styles.css'
 
-const SizeInfo = (props) =>
+const SizeInfo = ({sizes, setSize}) =>
   {
 
-    const createSizes = Object.keys(props.sizes).map((product) => {
-        return ( <button type="button" key={product} onClick={() => props.setSize(product)}>{product}</button> )
+    const createSizes = Object.keys(sizes).map((product) => {
+        return ( <button type="button" key={product} onClick={() => setSize(product)}>{product}</button> )
     })
 
     return (

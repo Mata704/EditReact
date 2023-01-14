@@ -1,5 +1,5 @@
 import { Routes, Route} from 'react-router-dom';
-import { CartProvider } from "./contexts/CartInfoContext"
+import { CartProvider } from "./contexts/CartContext"
 import './App.css'
 import './css/colors.css'
 import './css/elements.css'

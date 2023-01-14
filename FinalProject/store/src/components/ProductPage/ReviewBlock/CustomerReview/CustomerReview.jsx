@@ -1,7 +1,5 @@
 const CustomerReview = ({createStars,reviewsScore}) =>
 {
-     
-
     return (
         <div className="review">
             <div className="score">

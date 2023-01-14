@@ -8,7 +8,7 @@ import talking6 from './../../../assets/talking/talking06.png'
 import talking7 from './../../../assets/talking/talking07.png'
 import talking8 from './../../../assets/talking/talking08.png'
 
-const TalkingSection = (props) =>
+const TalkingSection = () =>
   {
     const talkingInfo= [{id:1, url:talking1, classInfo:"col-4 col-t-2 col-d-1 offset-1 offset-t-1 offset-d-2 paddingbottomfull"},
                         {id:2, url:talking2, classInfo:"col-4 col-t-2 col-d-1 offset-2 offset-t-2 offset-d paddingbottomfull" },

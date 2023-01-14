@@ -1,21 +1,18 @@
 import './styles.css'
 
-const QuantityInfo = (props) =>
+const QuantityInfo = ({quantity, setQuantity}) =>
   {
 
-    const quantityIncrementor=() => 
-    {
-        props.setQuantity(props.quantity+1)
+    const quantityIncrementor=() =>{
+        setQuantity(quantity+1)
     }
 
-    const quantityDecrementor=() => 
-    {
-        (props.quantity>1) ? props.setQuantity(props.quantity-1):props.setQuantity(1)
+    const quantityDecrementor=() =>{
+        (quantity>1) ? setQuantity(quantity-1):setQuantity(1)
     }
 
-    const quantityChange=(event) => 
-    {
-        (event.target.value>0) ? props.setQuantity(parseInt(event.target.value)):props.setQuantity(1)
+    const quantityChange=(event) =>{
+        (event.target.value>0) ? setQuantity(parseInt(event.target.value)):setQuantity(1)
     }
 
     return (
@@ -25,7 +22,7 @@ const QuantityInfo = (props) =>
             </div>
             <div className="col-6 col-d qty">
                 <button type="button" className="btnleft" onClick={quantityDecrementor}>-</button>
-                <input id='quantity' type="number" value={props.quantity} onChange={quantityChange} name="qty"/> 
+                <input id='quantity' type="number" value={quantity} onChange={quantityChange} name="qty"/> 
                 <button type="button" className="btnright" onClick={quantityIncrementor}>+</button>
             </div>
         </>

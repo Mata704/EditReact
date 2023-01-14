@@ -7,7 +7,7 @@ import journal1Medium from './../../../assets/journal/medium/journal01.jpg'
 import journal2Medium from './../../../assets/journal/medium/journal02.jpg'
 import journal3Medium from './../../../assets/journal/medium/journal03.jpg'
 
-const JornalSection = (props) =>
+const JornalSection = () =>
   {
 
     const info =[
@@ -41,7 +41,6 @@ const JornalSection = (props) =>
             srcset: `${journal3} 720w, ${journal3Medium} 360w`
         }
     ]
-
 
     return (
     <section id="journal" className="paddingverticaldouble">

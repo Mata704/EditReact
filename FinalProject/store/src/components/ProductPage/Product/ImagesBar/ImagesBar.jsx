@@ -1,24 +1,10 @@
-import './styles.css'
 
-
-
-
-const ImagesBar = (props) =>
+const ImagesBar = ({images}) =>
   {
-    
-    //Not on API so...
-    let arrayAux=[]
-    for(let i=0;i<props.nImages;i++)
-    {
-        arrayAux.push({name:props.name, url:props.image }) 
-    }
 
-
-    let imageIncrementor=0
-    const imageList = arrayAux.map((product) => {
-        imageIncrementor=imageIncrementor+1;
+    const imageList = images.map((product) => {
         return (
-            <a href="#" title={product.name} className="open" key={imageIncrementor}>
+            <a href="#" title={product.name} className="open" key={product.id}>
                 <img className="imgfit" src={product.url} alt={product.name} />
             </a>
         )

@@ -6,27 +6,29 @@ const initialContext = {
   updateCart: () => {}
 };
 
-export const CartInfoContext = createContext(initialContext);
+export const CartContext = createContext(initialContext);
 
 
 
 export const CartProvider = ({ children }) => {
   // Variaveis de estados
-  const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState([]);
 
   // Funções de Modificaçã do estado
-  const updateCart = (cart) => {
-    setCart(cart.length);
+  const updateCart = (value) => {
+    let aux = [...cart]
+    aux.push(value)
+    setCart(aux);
   };
 
   return (
-    <CartInfoContext.Provider
+    <CartContext.Provider
       value={{
-        cartCount: cart, // Passo o estado
+        cartCount: cart.length, // Passo o estado
         updateCart: updateCart // Passo o metodo para atulizar o estado
       }}
     >
       {children}
-    </CartInfoContext.Provider>
+    </CartContext.Provider>
   );
 };

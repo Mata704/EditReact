@@ -1,19 +1,16 @@
-//import { useParams } from "react-router-dom";
 import './styles.css'
 
-const ProductList = (props) =>
+const ProductList = ({sortValue, setSortValue, type, subtype}) =>
   {
-    const {sortValue, setSortValue, type, subtype} = props;
-    const sortOptions = ["Price","Popularity","Name","Season"]
+    const sortOptions = [{id:1, name:"Price"},{id:2, name:"Popularity"},{id:3, name:"Name"},{id:4, name:"Season"}]
 
-    
     const handleMaxPriceChange = (event) => {
         setSortValue(event.target.value);
     };
     
     const optionsList = sortOptions.map((option) => {
         return (
-            <option key={option} value={option}>{option}</option>
+            <option key={option.id} value={option.name}>{option.name}</option>
         )
     })  
 

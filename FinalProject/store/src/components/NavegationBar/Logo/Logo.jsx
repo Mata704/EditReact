@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './styles.css'
 import showLogo from './../../../assets/logo.svg'
 
-const Logo = (props) =>
+const Logo = () =>
   {
     return (
         <div className="col-5 col-t-3 col-d-2" id="logo">

@@ -4,7 +4,7 @@ import SortBar from './SortBar/SortBar'
 import GridList from './GridList/GridList'
 
 
-const ProductListPage = (props) =>
+const ProductListPage = () =>
   {
     const [sortValue, setSortValue] = useState("Price");
     const [arrayData, setarrayData] = useState([]);
@@ -27,6 +27,7 @@ const ProductListPage = (props) =>
     }
 
     //Fetch api data
+    //used getProductsList?nProducts=100 because getProductsList get only 10 products.
     useEffect(() => {
       fetch("https://foxcoding.net/api/getProductsList?nProducts=100")
       .then(response => response.json())
@@ -34,6 +35,9 @@ const ProductListPage = (props) =>
       setarrayData(result.data.products)
       setLoading(false)
       })
+      .catch((error) => {
+        console.log(error)
+        });
     }, [])
     
 

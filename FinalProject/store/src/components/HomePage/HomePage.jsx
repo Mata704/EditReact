@@ -8,7 +8,7 @@ import TalkingSection from './TalkingSection/TalkingSection'
 
 
 
-const HomePage = (props) =>
+const HomePage = () =>
   {
     return (
       <>

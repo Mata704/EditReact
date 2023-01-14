@@ -2,14 +2,14 @@ import './styles.css'
 import SizeFilter from './SizeFilter/SizeFilter'
 import CategoryFilter from './CategoryFilter/CategoryFilter'
 
-const FilterBar = (props) =>
+const FilterBar = ({filter,setFilter,allCategories,sizeFilter,setSizeFilter}) =>
   {
     
     return (
     <div id="filters" className="col-12 col-t-4 col-d-3">
         <p className="fancytext">Filters</p>
-        <CategoryFilter filter={props.filter} setFilter={props.setFilter} allCategories={props.allCategories} />
-        <SizeFilter sizeFilter={props.sizeFilter} setSizeFilter={props.setSizeFilter} />
+        <CategoryFilter filter={filter} setFilter={setFilter} allCategories={allCategories} />
+        <SizeFilter sizeFilter={sizeFilter} setSizeFilter={setSizeFilter} />
     </div>   
     )
   }

@@ -1,50 +1,41 @@
 import './styles.css'
 
-const FilterType = (props) =>
+const FilterType = ({filter,setFilter,allCategories,type}) =>
   {
  
-    function changeFilter(value)
-    {
-        if(props.filter=='' || props.filter!=value)
-        {
-            props.setFilter(value)
-            
-        } else if(props.filter==value)
-        {
-            props.setFilter('')  
-        }
-        
+    const changeFilter = (value) =>{
+        if(filter=='' || filter!=value){
+            setFilter(value)   
+        } else if(filter==value){
+            setFilter('')  
+        }    
     }
 
-    function closeFilter(id)
-    {
+    const closeFilter = (id) =>{
         document.getElementById(id).classList.remove('open')   
     }
 
-    function openFilter(id)
-    {   
+    const openFilter = (id) =>{   
         document.getElementById(id).classList.add('open')    
     }
 
-    const allCategories = props.allCategories.filter(category => category.type==props.type).map((category) => {
-        
-        return (<li key={category.subType} ><a title={category.subType} value={category.id} onClick={() => changeFilter(category.id)}><i className="icn-chevron-right"></i> {category.subType}</a></li>)
+    const allSubCategories = allCategories.filter(category => category.type==type).map((category) => {   
+        return (<li key={category.id} ><a title={category.subType} value={category.id} onClick={() => changeFilter(category.id)}><i className="icn-chevron-right"></i>{category.subType}</a></li>)
     })
 
 
     return(
-    <li id={`filter${props.type}`}>
-        <a title={props.type} >
-            {props.type}
-            <i className="icn-chevron-down" onClick={() =>{ openFilter(`filter${props.type}`)}}></i>
-            <i className="icn-chevron-up" onClick={() => { closeFilter(`filter${props.type}`)}}></i>
+    <li id={`filter${type}`}>
+        <a title={type} >
+            {type}
+            <i className="icn-chevron-down" onClick={() =>{ openFilter(`filter${type}`)}}></i>
+            <i className="icn-chevron-up" onClick={() => { closeFilter(`filter${type}`)}}></i>
         </a>
         <ul>
-            {allCategories}
+            {allSubCategories}
         </ul>
     </li>
     )
   }
-
 
   export default FilterType;

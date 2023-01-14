@@ -1,6 +1,6 @@
 import './styles.css'
 
-const Contacts = (props) =>
+const Contacts = () =>
   {
     return (
         <div className="col-4 col-d-2">

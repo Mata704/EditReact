@@ -4,7 +4,7 @@ import Contacts from './Contacts/Contacts'
 import Newsletter from './Newsletter/Newsletter'
 
 
-const FooterBar = (props) =>
+const FooterBar = () =>
   {
     return (
         <div className="gridrow">

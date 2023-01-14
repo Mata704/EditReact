@@ -1,14 +1,15 @@
 
-const Categories = (props) =>
+const Categories = () =>
   {
-    const options = ["About Us","Testimonials","Contact","Journal","Privacy Policy"]
+    //Info
+    const options = [{id:1, title:"About Us"},{id:2, title:"Testimonials"},{id:3, title:"Contact"},{id:4, title:"Journal"},{id:5, title:"Privacy Policy"}]
     
+    //Map all options
     const optionsList = options.map((option) => {
       return (
-        <li key={option}><a href="#" title={option}>{option}</a></li>
+        <li key={option.id}><a href="#" title={option.title}>{option.title}</a></li>
       )
   })  
-
 
     return (
         <div className="col-4 col-d-2">

@@ -5,9 +5,7 @@ import press1Medium from './../../../assets/press/medium/press01.jpg'
 import press2Medium from './../../../assets/press/medium/press02.jpg'
 import press3Medium from './../../../assets/press/medium/press03.jpg'
 
-
-
-const PressBlocks = (props) =>
+const PressBlocks = () =>
 {
 
     const pressInfo=[   

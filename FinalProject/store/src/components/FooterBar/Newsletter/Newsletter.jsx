@@ -1,7 +1,7 @@
 import './styles.css'
 import FormInfo from './FormInfo/FormInfo'
 
-const Newsletter = (props) =>
+const Newsletter = () =>
   {
     return (
     <div className="col-12 col-d-6 newsletter">

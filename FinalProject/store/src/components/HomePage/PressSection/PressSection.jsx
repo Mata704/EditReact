@@ -9,7 +9,7 @@ import press3Medium from './../../../assets/press/medium/press03.jpg'
 
 
 
-const PressSection = (props) =>
+const PressSection = () =>
   {
 
     const pressInfo= [  {id:1, url:press1, href:"https://hypebeast.com/2020/5/yohji-yamamoto-replica-spring-summer-1996-capsule-collection-release-info", urlSet:`${press1} 720w, ${press1Medium} 450w`, name:'Replica Collection', sizes:"(min-width: 1200px) 720px, 450px"},
@@ -20,9 +20,6 @@ const PressSection = (props) =>
     const press = pressInfo.map((press) => {
     return <PressCard info={press} key={press.id} />
     })
-
-
-
 
     return (
         <section id="press" className="paddingverticaldouble bg-graylight">

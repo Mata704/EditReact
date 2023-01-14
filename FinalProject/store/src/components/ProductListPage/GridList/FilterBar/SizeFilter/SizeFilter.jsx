@@ -1,25 +1,20 @@
 import './styles.css'
 
-const SizeFilter = (props) =>
+const SizeFilter = ({sizeFilter, setSizeFilter}) =>
   {
     const sizes =[1,2,3,4]
  
-
     const handleSizeChange = (event) => { 
-        if(props.sizeFilter=='' || props.sizeFilter!=event.target.value)
-        {
-            props.setSizeFilter(event.target.value)
-
-        } else if(props.sizeFilter==event.target.value)
-        {
-            props.setSizeFilter('')  
+        if(sizeFilter=='' || sizeFilter!=event.target.value){
+            setSizeFilter(event.target.value)
+        } else if(sizeFilter==event.target.value){
+            setSizeFilter('')  
         }    
     };
 
     const allSizes = sizes.map((size) => {
         return (<button type="button" value={size} key={size} onClick={handleSizeChange}>{size}</button>)
     })
-
 
     return(
     <div className="sizes">

@@ -1,6 +1,6 @@
 import './styles.css'
 
-const PromoBar = (props) =>
+const PromoBar = () =>
   {
     return (
     <div id="promobar" className="textcenter bg-graydark graylight">

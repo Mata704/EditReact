@@ -1,19 +1,18 @@
 import './styles.css'
 
-const ProductImage = (props) =>
+const ProductImage = ({url}) =>
   {
-
-    const options = [{name:"Facebook", image:"icn-facebook"},{name:"Twitter", image:"icn-twitter"},{name:"Pinteres", image:"icn-pinterest"}]
+    const options = [{id:0, name:"Facebook", image:"icn-facebook"},{id:1, name:"Twitter", image:"icn-twitter"},{id:2, name:"Pinteres", image:"icn-pinterest"}]
+    
     const optionsList = options.map((option) => {
       return (
-        <a key={option.name} href="#" title={option.name}><i className={option.image}></i></a>
+        <a key={option.id} href="#" title={option.name}><i className={option.image}></i></a>
       )
   })  
     
-
     return (
     <div id="bigimg" className="col-9 col-t-4 col-d-5">
-        <img className="imgfit" src={props.url} />
+        <img className="imgfit" src={url} />
         <div className="share margintopfull">
             Share this product 
             {optionsList}

@@ -3,7 +3,7 @@ import showSlider from './../../../../assets/slider/slider01.jpg'
 import showSliderMedium from './../../../../assets/slider/slider01-medium.jpg'
 import showSliderSmall from './../../../../assets/slider/slider01-small.jpg'
 
-const Slides = (props) =>
+const Slides = () =>
   {
     return (
     <div className="slider-slides">

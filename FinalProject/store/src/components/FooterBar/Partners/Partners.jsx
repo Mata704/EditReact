@@ -1,10 +1,12 @@
-const Partners = (props) =>
+const Partners = () =>
   {
-    const options = ["Support","Shipping & Returns","Size Guide","Product Care"]
+    //All options
+    const options = [{id:1, title:"Support"},{id:2, title:"Shipping & Returns"},{id:3, title:"Size Guide"},{id:4, title:"Product Care"}]
     
+    //Map all options
     const optionsList = options.map((option) => {
       return (
-        <li key={option}><a href="#" title={option}>{option}</a></li>
+        <li key={option.id}><a href="#" title={option.title}>{option.title}</a></li>
       )
     })  
 

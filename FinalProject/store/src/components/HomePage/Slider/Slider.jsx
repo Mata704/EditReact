@@ -3,7 +3,7 @@ import Slides from './Slides/Slides'
 
 
 
-const Slider = (props) =>
+const Slider = () =>
   {
     return (
     <section className="slider">

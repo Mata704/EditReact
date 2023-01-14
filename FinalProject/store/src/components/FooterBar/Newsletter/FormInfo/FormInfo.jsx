@@ -1,6 +1,6 @@
 import './styles.css'
 
-const FormInfo = (props) =>
+const FormInfo = () =>
   {
     return (
     <form className="gridrowfull">

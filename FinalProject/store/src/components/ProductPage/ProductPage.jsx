@@ -10,14 +10,12 @@ import ReviewBlock from './ReviewBlock/ReviewBlock'
 import RelatedProducts from './RelatedProducts/RelatedProducts'
 
 
-
-
-const ProductPage = (props) =>
+const ProductPage = () =>
   {
     const params =useParams()
     const [productData, setProductData] = useState({});
     const [loading, setLoading] = useState(true);
-
+    const [reloadAPI, setReloadAPI] = useState(true);
 
     const doubleText= [{id:1, extraClass:'graymedium marginbottomfull', text:'Nunc a augue velit. Nullam eget velit sit amet orci dignissim iaculis. Quisque dignissim neque in odio laoreet sodales. Phasellus gravida facilisis est. Ut nec metus lobortis, euismod felis eget, ornare erat. Donec gravida diam sed facilisis consequat.'},
                        {id:2, extraClass:'marginbottomfull', text:'Nam tincidunt sem elit, a facilisis nibh maximus vitae. Proin suscipit augue mi, id sollicitudin orci lacinia vitae. Vestibulum est neque, posuere eget fringilla nec, congue ac ipsum. In tellus magna, placerat eu sapien et, faucibus aliquam nulla. Cras volutpat mattis mi, a porttitor odio elementum sed. Vivamus facilisis erat at lacus blandit suscipit. In nec sem gravida, dignissim est nec, hendrerit lacus. Nunc sed convallis massa.'},
@@ -26,7 +24,6 @@ const ProductPage = (props) =>
                       ]
 
     useEffect(() => {
-
         fetch(`https://foxcoding.net/api/getProduct?id=${params.id}`, {
             method: 'GET'  
         })
@@ -38,10 +35,8 @@ const ProductPage = (props) =>
         .catch((error) => {
             console.log(error)
             });
-      
-        }, [])
+        }, [reloadAPI])
 
-        //console.log(productData)
 
     return (
       <>
@@ -57,7 +52,7 @@ const ProductPage = (props) =>
             </div>
             <LooksBlock/> 
             <ReviewBlock score={productData.score}/>
-            <RelatedProducts categories={productData.category} id={productData.id}/>  
+            <RelatedProducts categories={productData.category} id={productData.id} reloadAPI={reloadAPI} setReloadAPI={setReloadAPI} />  
         </>
         } 
       </>

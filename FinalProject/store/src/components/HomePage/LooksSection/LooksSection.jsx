@@ -15,7 +15,7 @@ import look4Small from './../../../assets/looks/small/looks04.jpg'
 
 
 
-const LooksSection = (props) =>
+const LooksSection = () =>
   {
 
     const lookInfo= [   {id:1, url:look1, urlSet:`${look1} 720w, ${look1Medium} 360w, ${look1Small} 240w`, name:'LOOK 1', sizes:"(min-width: 1200px) 720px, (min-width: 750px) 640px, 240px"},

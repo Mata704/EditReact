@@ -4,7 +4,7 @@ import MainMenu from './MainMenu/MainMenu'
 import CustomerMenu from './CustomerMenu/CustomerMenu'
 
 
-const NavegationBar = (props) =>
+const NavegationBar = () =>
   {
     return (
       <nav className="gridrow">

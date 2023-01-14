@@ -4,9 +4,7 @@ import aboutImageMedium from './../../../assets/journal/medium/about.jpg'
 import aboutImageSmall from './../../../assets/journal/small/about.jpg'
 
 
-
-
-const AboutSection = (props) =>
+const AboutSection = () =>
   {
     return (
     <section id="about" className="paddingverticaldouble">
